@@ -50,7 +50,6 @@ window.onload = function() {
 			moveEverything();
 			drawEverything();
 		}, 1000/framesPerSecond);
-	
 
 	canvas.addEventListener('mousedown' , handleMouseClick);
 
@@ -73,6 +72,8 @@ function ballReset() {
 	ballY = canvas.height/2;
 }
 
+	// This is the AI part 
+	
 function computerMovement() {
 	var paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
 	if(paddle2YCenter < ballY - 40) {
@@ -129,6 +130,8 @@ function moveEverything() {
 	}
 }
 
+	// This is the Net drawn in the middle of the screen
+	
 function drawNet() {
 	for(var i=0;i<canvas.height; i+=40) {
 
@@ -173,6 +176,8 @@ function drawEverything() {
 	canvasContext.fillText(player2Score ,canvas.width-100,100);
 
 }
+	
+	// making the circle
 
 function colorCircle(centerX,centerY, radius, drawColor){
 	canvasContext.fillStyle = drawColor;
